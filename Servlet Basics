@@ -1,0 +1,41 @@
+
+ ## Interfeace Servlet -> GenericServlet -> HttpServlet
+
+1. class First implements Servlet {
+
+      init();
+      service();
+      destroy();
+      
+      getServletConfig();
+      getServletInfo();
+
+}
+
+2. class First extends GenericServlet {
+
+     public void service(ServletRequest request, ServletResponse response) {
+         response.setContentType("text/html");
+         
+         PrintWriter out = response.getWriter();
+         out.print("<html><body>");
+         out.print("<b>hello generic servlet</b>");
+         out.print("</html></body>");
+     }
+
+}
+
+  class First extends HttPServlet {
+  
+       public void doGet(HttpServletRequest request, HttpServletResponse response) {
+         response.setContentType("text/html");
+         
+         PrintWriter out = response.getWriter();
+         out.print("<html><body>");
+         out.print("<b>hello generic servlet</b>");
+         out.print("</html></body>");
+         
+         out. close()
+     }
+       
+  }
