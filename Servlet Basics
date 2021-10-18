@@ -3,12 +3,12 @@
 
 1. class First implements Servlet {
 
-      init();
-      service();
-      destroy();
+     public void init(ServletConfig config);
+     public void service(ServletRequest request, Servlet Response response);
+     public void destroy();
       
-      getServletConfig();
-      getServletInfo();
+     public ServletConfig getServletConfig();
+     public String getServletInfo();
 
 }
 
