@@ -3,12 +3,12 @@
 
 1. class First implements Servlet {
 
-     public void init(ServletConfig config);
-     public void service(ServletRequest request, Servlet Response response);
-     public void destroy();
+      init();
+      service();
+      destroy();
       
-     public ServletConfig getServletConfig();
-     public String getServletInfo();
+      getServletConfig();
+      getServletInfo();
 
 }
 
@@ -20,7 +20,7 @@
          PrintWriter out = response.getWriter();
          out.print("<html><body>");
          out.print("<b>hello generic servlet</b>");
-         out.print("</html></body>");
+         out.print("</body></html>");
      }
 
 }
@@ -33,9 +33,11 @@
          PrintWriter out = response.getWriter();
          out.print("<html><body>");
          out.print("<b>hello generic servlet</b>");
-         out.print("</html></body>");
+         out.print("</body></html>");
          
          out. close()
      }
        
   }
+  
+
