@@ -1,0 +1,46 @@
+
+@Component -> Generic Component.
+Using proper annotations specify the intent of the class, also increases the readability of the code.
+It also provides some annotation specific functionality.
+
+@Service -> used in the business layer.
+
+@Controller -> used for the presentation layer. Just @Controller returns the view,
+@RestController -> returns the response body as response. 
+[RestController = Controller + ResponseBody]  
+
+to classify the components in different category.
+
+@repository -> used in the data layer/dao layer. 
+Database related exception will be handled by @Repository.
+[If we use @Repository, spring will provide default exception translation facility]
+
+
+
+
+@Component is equivalent to
+
+<bean>
+@Service, @Controller, @Repository = {@Component + some more special functionality}
+
+That mean Service, The Controller and Repository are functionally the same.
+
+The three annotations are used to separate "Layers" in your application,
+
+Controllers just do stuff like dispatching, forwarding, calling service methods etc.
+Service Hold business Logic, Calculations etc.
+Repository are the DAOs (Data Access Objects), they access the database directly.
+Now you may ask why separate them: (I assume you know AOP-Aspect Oriented Programming)
+
+Let's say you want to Monitors the Activity of the DAO Layer only. You will write an Aspect
+ (A class) class that does some logging before and after every method of your DAO is invoked, 
+ you are able to do that using AOP as you have three distinct Layers and are not mixed.
+
+So you can do logging of DAO "around", "before" or "after" the DAO methods. 
+You could do that because you had a DAO in the first place.
+ What you just achieved is Separation of concerns or tasks.
+
+Imagine if there were only one annotation @Controller, then this component will have dispatching,
+ business logic and accessing database all mixed, so dirty code!
+
+Above mentioned is one very common scenario, there are many more use cases of why to use three annotations.
