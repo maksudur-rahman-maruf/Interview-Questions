@@ -18,9 +18,6 @@ Database related exception will be handled by @Repository.
 
 
 
-@Component is equivalent to
-
-<bean>
 @Service, @Controller, @Repository = {@Component + some more special functionality}
 
 That mean Service, The Controller and Repository are functionally the same.
