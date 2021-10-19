@@ -16,6 +16,7 @@ Database related exception will be handled by @Repository.
 [If we use @Repository, spring will provide default exception translation facility]
 
 
+------------------------------------------------------------------------------------
 
 
 @Service, @Controller, @Repository = {@Component + some more special functionality}
