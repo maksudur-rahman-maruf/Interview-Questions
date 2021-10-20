@@ -11,3 +11,8 @@
 Using @Configuration over a class means that, this class is a configuration 
 file which will be used by Spring Container to set up the project. 
 It also might declare one or more @Bean methods which ask Spring to process at Runtime.
+
+@Transactional
+The built in methods of JpaRepostiory are Transactional By default.
+But when we add custom methods in JpaRepository then we have to add @Transactional
+in the service. [Built in methods like -> findAll(), findById(), save(), deleteById() etc.]
