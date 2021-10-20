@@ -1,0 +1,8 @@
+@Bean vs @Component
+@Bean: 
+1. Method Level Annotation
+2. Need to manually create the bean
+
+@Component
+1. Class Level Annotation
+2. Implicitly create the bean. 
