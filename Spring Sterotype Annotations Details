@@ -1,6 +1,6 @@
 
 @Component -> Generic Component.
-When we use @Component over a class Spring Container will search for that bean and register it into the container.
+When we use @Component over a class Spring Container will detect the bean and register it into the container.
 
 Using proper annotations specify the intent of the class, also increases the readability of the code.
 It also provides some annotation specific functionality.
