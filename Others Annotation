@@ -6,3 +6,8 @@
 @Component
 1. Class Level Annotation
 2. Implicitly create the bean. 
+
+@Configuration
+Using @Configuration over a class means that, this class is a configuration 
+file which will be used by Spring Container to set up the project. 
+It also might declare one or more @Bean methods which ask Spring to process at Runtime.
